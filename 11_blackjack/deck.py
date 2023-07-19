@@ -22,3 +22,25 @@ class Card:
         return f"{self.rank} de {self.nipe}"
     
 
+def create_deck() -> List[Card]:
+    deck = list()
+
+    for nipe in nipes:
+        for rank in ranks:
+            deck.append(Card(nipe=nipe, rank=rank))
+
+    return deck
+
+class Deck:
+    def __init__(self, number_of_decks: int=1) -> None:
+        self.number_of_decks: int = number_of_decks
+        self.deck: list = create_deck()*self.number_of_decks
+
+    def shuffle(self) -> None:
+        shuffle(self.deck)
+
+    def deal(self) -> Card:
+        return self.deck.pop()
+    
+    def new_deck(self) -> List[Card]:
+        self.deck = create_deck()*self.number_of_decks
