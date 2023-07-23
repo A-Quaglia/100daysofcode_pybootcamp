@@ -5,7 +5,6 @@ class EtchAScketch:
 
     def __init__(self):
         self.pen = None
-
         self.heading = 0
 
     def set_up(self):

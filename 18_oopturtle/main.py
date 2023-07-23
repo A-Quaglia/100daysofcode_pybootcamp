@@ -1,6 +1,6 @@
 from random import choice
 
-import colorgram
+# import colorgram
 import turtle as t
 
 # hirst_colors = colorgram.extract('hirst_painting.jpg', 20)
@@ -33,12 +33,12 @@ print()
 #     tim.dot(size, color)
 #     tim.penup()
 
-def draw_dot(size=10, color="blue", use_dot=True):
+def draw_dot(size=10, color="blue"):
     tim.pendown()
     tim.fillcolor(color)
     tim.pencolor(color)
     tim.begin_fill()
-    tim.circle(size, steps=4)
+    tim.circle(size, steps=12)
     tim.end_fill()
     tim.penup()
 
